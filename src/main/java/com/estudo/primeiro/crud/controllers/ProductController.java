@@ -17,6 +17,13 @@ public class ProductController {
         product.setName(dto.getName());
         product.setDescription(dto.getDescription());
         product.setPrice(dto.getPrice());
+        product.setCategory(dto.getCategory());
+        product.setActive(dto.getActive());
+        product.setRating(dto.getRating());
+        product.setImageUrl(dto.getImageUrl());
+        product.setQuantityInStock(dto.getQuantityInStock());
+        product.setReleaseDate(dto.getReleaseDate());
+        product.setDiscount(dto.getDiscount());
         return product;
     }
 
@@ -25,6 +32,13 @@ public class ProductController {
         dto.setName(product.getName());
         dto.setDescription(product.getDescription());
         dto.setPrice(product.getPrice());
+        dto.setCategory(product.getCategory());
+        dto.setActive(product.getActive());
+        dto.setRating(product.getRating());
+        dto.setImageUrl(product.getImageUrl());
+        dto.setQuantityInStock(product.getQuantityInStock());
+        dto.setReleaseDate(product.getReleaseDate());
+        dto.setDiscount(product.getDiscount());
         return dto;
     }
 
