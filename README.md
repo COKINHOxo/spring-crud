@@ -39,7 +39,7 @@ cd spring-crud
 
     ./mvnw spring-boot:run
     
-    No Windows, use:
+   No Windows, use:
     
     mvnw.cmd spring-boot:run
 
