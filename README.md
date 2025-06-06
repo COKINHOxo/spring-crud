@@ -12,7 +12,7 @@ Projeto simples em Java com Spring Boot para realizar operações CRUD (Create, 
 - [Como Executar](#como-executar-🚀)
 - [Endpoints Disponíveis](#endpoints-disponíveis)
 - [O que Aprendi](#o-que-aprendi-com-este-projeto-📚)
-- [Licença](#licença)
+
 
 ## Sobre o Projeto
 
