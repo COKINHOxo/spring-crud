@@ -16,7 +16,7 @@ Projeto simples em Java com Spring Boot para realizar operações CRUD (Create, 
 
 ## Sobre o Projeto
 
-Este é meu primeiro projeto em Java, desenvolvido para a disciplina de Análise e Desenvolvimento de Sistemas (ADS) na FATEC Mogi das Cruzes.
+Este é meu primeiro projeto em Java, desenvolvido para a disciplina de programação orientada a objetos (POO) na FATEC Mogi das Cruzes.
 
 O projeto foi criado usando o [Spring Initializr](https://start.spring.io/) e implementa uma API REST simples para operações básicas de CRUD.
 
