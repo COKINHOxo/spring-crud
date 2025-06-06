@@ -11,7 +11,7 @@ Tecnologias Utilizadas
 
     Spring Boot
 
-    Maven — gerenciador de dependências e build que vem junto com o Spring Initializr, facilita a execução e organização do projeto.
+    Maven 
 
 Como Executar
 
