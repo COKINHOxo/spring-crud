@@ -1,4 +1,4 @@
-package com.estudo.primeiro.crud.DTOs;
+package com.estudo.primeiro.crud.dtos;
 
 import jakarta.validation.constraints.*;
 import lombok.Data;
@@ -26,6 +26,7 @@ public class ProductDTO {
     @Min(value = 0, message = ("Não é possível ter estoque negativo"))
     private Integer quantityInStock;
 
+    @NotNull(message = "A data de lançamento é obrigatória")
     @PastOrPresent(message = "O produto não pode ter sido lançado no futuro")
     private LocalDate releaseDate;
 
@@ -38,7 +39,7 @@ public class ProductDTO {
 
     @Pattern(regexp = "^(https?://).+", message = "O URL da imagem deve ser um URL válido começando com http ou https")
     private String imageUrl;
-    @DecimalMin(value = "0", message = "O disconto deve ser positivo ou 0")
+    @DecimalMin(value = "0", message = "O desconto deve ser positivo ou 0")
     @DecimalMax(value = "100", message = "O desconto não deve ser maior que 100%")
     private Double discount;
 
