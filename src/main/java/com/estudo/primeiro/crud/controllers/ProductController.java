@@ -1,7 +1,6 @@
 package com.estudo.primeiro.crud.controllers;
 
 import com.estudo.primeiro.crud.dtos.ProductDTO;
-import com.estudo.primeiro.crud.entities.Product;
 import com.estudo.primeiro.crud.services.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
