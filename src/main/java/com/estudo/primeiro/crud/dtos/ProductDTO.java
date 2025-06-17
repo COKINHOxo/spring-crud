@@ -1,5 +1,6 @@
 package com.estudo.primeiro.crud.dtos;
 
+import com.estudo.primeiro.crud.entities.Product;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 
@@ -42,5 +43,20 @@ public class ProductDTO {
     @DecimalMin(value = "0", message = "O desconto deve ser positivo ou 0")
     @DecimalMax(value = "100", message = "O desconto não deve ser maior que 100%")
     private Double discount;
+
+    public Product MapToEntity() {
+        Product product = new Product();
+        product.setName(this.getName());
+        product.setDescription(this.getDescription());
+        product.setPrice(this.getPrice());
+        product.setCategory(this.getCategory());
+        product.setActive(this.getActive());
+        product.setRating(this.getRating());
+        product.setImageUrl(this.getImageUrl());
+        product.setQuantityInStock(this.getQuantityInStock());
+        product.setReleaseDate(this.getReleaseDate());
+        product.setDiscount(this.getDiscount());
+        return product;
+    }
 
 }
