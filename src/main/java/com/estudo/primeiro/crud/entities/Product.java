@@ -1,5 +1,6 @@
 package com.estudo.primeiro.crud.entities;
 
+import com.estudo.primeiro.crud.dtos.ProductDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -38,5 +39,27 @@ public class Product {
     public Product(String name, Double price) {
         this.name = name;
         this.price = price;
+    }
+
+    public void UpdateProduct(String name, String description,Double price){
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
+
+    public ProductDTO MapToDTO() {
+        ProductDTO dto = new ProductDTO();
+        dto.setName(this.getName());
+        dto.setDescription(this.getDescription());
+        dto.setPrice(this.getPrice());
+        dto.setCategory(this.getCategory());
+        dto.setActive(this.getActive());
+        dto.setRating(this.getRating());
+        dto.setImageUrl(this.getImageUrl());
+        dto.setQuantityInStock(this.getQuantityInStock());
+        dto.setReleaseDate(this.getReleaseDate());
+        dto.setDiscount(this.getDiscount());
+        return dto;
     }
 }
