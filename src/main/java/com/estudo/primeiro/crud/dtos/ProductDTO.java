@@ -8,6 +8,8 @@ import java.time.LocalDate;
 
 @Data
 public class ProductDTO {
+    private long id;
+
     @NotBlank(message = "O nome não pode estar vazio")
     @Size(min = 3, max = 300)
     private String name;
