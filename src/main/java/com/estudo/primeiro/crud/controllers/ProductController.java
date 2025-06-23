@@ -45,13 +45,7 @@ public class ProductController {
     })
     @GetMapping("/{id}")
     public ResponseEntity<ProductDTO> getProductById(@PathVariable Long id) {
-        Optional<ProductDTO> optionalProduct = service.FindById(id);
-
-        if (optionalProduct.isEmpty()) {
-            return ResponseEntity.notFound().build();
-        }
-
-        return ResponseEntity.ok(optionalProduct.get());
+        return ResponseEntity.ok(service.FindById(id));
     }
 
     @Operation(summary = "Criar um produto no sistema", description = "Cria um produto baseado nas informações enviadas ao sistema")
@@ -74,12 +68,8 @@ public class ProductController {
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor")
     })
     @PutMapping("/{id}")
-    public ResponseEntity<ProductDTO> updateProduct(@PathVariable Long id, @Valid @RequestBody ProductDTO dto) {
+    public ResponseEntity<ProductDTO> updateProduct(@PathVariable Long id, @Valid @RequestBody ProductDTO dto) throws Exception {
         ProductDTO existing = service.Update(dto, id);
-
-        if (existing == null) {
-            return ResponseEntity.notFound().build();
-        }
 
         return ResponseEntity.ok(existing);
     }
@@ -93,7 +83,7 @@ public class ProductController {
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor")
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteProduct(@PathVariable Long id) throws Exception {
         service.Delete(id);
         return ResponseEntity.noContent().build();
     }
