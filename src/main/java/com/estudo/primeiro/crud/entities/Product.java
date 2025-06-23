@@ -41,15 +41,23 @@ public class Product {
         this.price = price;
     }
 
-    public void UpdateProduct(String name, String description,Double price){
+    public void UpdateProduct(String name, String description,Double price, String category, Integer quantityInStock, LocalDate releaseDate, Double rating, Boolean active, String imageUrl,Double discount){
         this.name = name;
         this.description = description;
         this.price = price;
+        this.category = category;
+        this.quantityInStock = quantityInStock;
+        this.releaseDate = releaseDate;
+        this.rating = rating;
+        this.active = active;
+        this.imageUrl = imageUrl;
+        this.discount = discount;
     }
 
 
     public ProductDTO MapToDTO() {
         ProductDTO dto = new ProductDTO();
+        dto.setId(this.getId());
         dto.setName(this.getName());
         dto.setDescription(this.getDescription());
         dto.setPrice(this.getPrice());
