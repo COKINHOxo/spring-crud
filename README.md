@@ -1,57 +1,54 @@
-Spring CRUD 🛠️
+# Spring CRUD 🛠️
 
-Java
-Spring Boot
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.7-green)
 
 Projeto simples em Java com Spring Boot para realizar operações CRUD (Create, Read, Update, Delete).
-📑 Sumário
 
-    Sobre o Projeto
+---
 
-    Tecnologias Utilizadas
+## Sumário
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Executar](#como-executar)
+  - [Executar com H2 (Local)](#executar-com-h2-local)
+  - [Executar com PostgreSQL](#executar-com-postgresql)
+- [Endpoints Disponíveis](#endpoints-disponíveis)
+- [Documentação Swagger](#documentação-swagger)
+- [O que Aprendi](#o-que-aprendi)
 
-    Como Executar 🚀
+---
 
-        Executar com H2 (local)
-
-        Executar com PostgreSQL
-
-    Endpoints Disponíveis
-
-    Documentação Swagger
-
-    O que Aprendi com este Projeto 📚
-
-Sobre o Projeto
+## Sobre o Projeto
 
 Este é meu primeiro projeto em Java, desenvolvido para a disciplina de Programação Orientada a Objetos (POO) na FATEC Mogi das Cruzes.
 
-O projeto foi criado usando o Spring Initializr e implementa uma API REST simples para operações básicas de CRUD.
+O projeto foi criado usando o [Spring Initializr](https://start.spring.io/) e implementa uma API REST simples para operações básicas de CRUD.
 
-Agora, também suporta o banco de dados em memória H2, facilitando a execução local para testes e desenvolvimento sem configurar um banco externo.
-Tecnologias Utilizadas
+Agora, também suporta o banco de dados em memória **H2**, facilitando a execução local para testes e desenvolvimento sem configurar um banco externo.
 
-    Java 17
+---
 
-    Spring Boot
+## Tecnologias Utilizadas
 
-    Maven
+- Java 17
+- Spring Boot
+- Maven
+- Spring Data JPA
+- H2 Database (modo dev)
+- PostgreSQL (modo padrão)
+- Swagger (OpenAPI)
+- Lombok
 
-    Spring Data JPA
+---
 
-    H2 Database (modo dev)
+## Como Executar
 
-    PostgreSQL (modo padrão)
-
-    Swagger (OpenAPI)
-
-    Lombok
-
-Como Executar 🚀
-✅ Executar com H2 (local)
+### Executar com H2 (Local)
 
 Mais rápido para rodar e testar:
 
+```bash
 ./mvnw spring-boot:run "-Dspring-boot.run.profiles=dev"
 
 Ou no Windows CMD:
@@ -70,7 +67,7 @@ Acesse:
 
         Senha: (em branco)
 
-🐘 Executar com PostgreSQL
+Executar com PostgreSQL
 
     Crie um arquivo .env ou configure variáveis de ambiente:
 
@@ -89,12 +86,12 @@ GET	/api/items/{id}	Busca um item por ID
 POST	/api/items	Cria um novo item
 PUT	/api/items/{id}	Atualiza um item
 DELETE	/api/items/{id}	Deleta um item
-📘 Documentação Swagger
+Documentação Swagger
 
 A documentação da API está disponível com Swagger:
 
 👉 http://localhost:8080/swagger-ui.html
-O que Aprendi com este Projeto 📚
+O que Aprendi
 
 Este projeto foi uma excelente introdução prática ao desenvolvimento com Java e Spring Boot. Durante o desenvolvimento, aprendi a:
 
