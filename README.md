@@ -1,74 +1,115 @@
-# Spring CRUD 🛠️
+Spring CRUD 🛠️
 
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.7-green)
-
+Java
+Spring Boot
 
 Projeto simples em Java com Spring Boot para realizar operações CRUD (Create, Read, Update, Delete).
+📑 Sumário
 
-## Sumário
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Como Executar](#como-executar-🚀)
-- [Endpoints Disponíveis](#endpoints-disponíveis)
-- [O que Aprendi](#o-que-aprendi-com-este-projeto-📚)
+    Sobre o Projeto
 
+    Tecnologias Utilizadas
 
-## Sobre o Projeto
+    Como Executar 🚀
 
-Este é meu primeiro projeto em Java, desenvolvido para a disciplina de programação orientada a objetos (POO) na FATEC Mogi das Cruzes.
+        Executar com H2 (local)
 
-O projeto foi criado usando o [Spring Initializr](https://start.spring.io/) e implementa uma API REST simples para operações básicas de CRUD.
+        Executar com PostgreSQL
 
-## Tecnologias Utilizadas
+    Endpoints Disponíveis
 
-- Java 17
-- Spring Boot
-- Maven (gerenciador de dependências e build que acompanha o Spring Initializr)
+    Documentação Swagger
 
-## Como Executar 🚀
+    O que Aprendi com este Projeto 📚
 
-1. Clone este repositório:
+Sobre o Projeto
 
-```bash
-git clone https://github.com/COKINHOxo/spring-crud.git
-cd spring-crud
-```
+Este é meu primeiro projeto em Java, desenvolvido para a disciplina de Programação Orientada a Objetos (POO) na FATEC Mogi das Cruzes.
 
- Execute a aplicação com Maven:
+O projeto foi criado usando o Spring Initializr e implementa uma API REST simples para operações básicas de CRUD.
 
-    ./mvnw spring-boot:run
-    
-   No Windows, use:
-    
-    mvnw.cmd spring-boot:run
+Agora, também suporta o banco de dados em memória H2, facilitando a execução local para testes e desenvolvimento sem configurar um banco externo.
+Tecnologias Utilizadas
 
-Acesse a aplicação no navegador em: http://localhost:8080
+    Java 17
+
+    Spring Boot
+
+    Maven
+
+    Spring Data JPA
+
+    H2 Database (modo dev)
+
+    PostgreSQL (modo padrão)
+
+    Swagger (OpenAPI)
+
+    Lombok
+
+Como Executar 🚀
+✅ Executar com H2 (local)
+
+Mais rápido para rodar e testar:
+
+./mvnw spring-boot:run "-Dspring-boot.run.profiles=dev"
+
+Ou no Windows CMD:
+
+mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+
+Acesse:
+
+    API: http://localhost:8080
+
+    Console H2: http://localhost:8080/h2-console
+
+        JDBC URL: jdbc:h2:mem:cruddb
+
+        Usuário: sa
+
+        Senha: (em branco)
+
+🐘 Executar com PostgreSQL
+
+    Crie um arquivo .env ou configure variáveis de ambiente:
+
+DB_URL=jdbc:postgresql://localhost:5432/seu_banco
+DB_USERNAME=seu_usuario
+DB_PASSWORD=sua_senha
+
+    Rode a aplicação:
+
+./mvnw spring-boot:run
 
 Endpoints Disponíveis
+Método	Endpoint	Ação
+GET	/api/items	Lista todos os itens
+GET	/api/items/{id}	Busca um item por ID
+POST	/api/items	Cria um novo item
+PUT	/api/items/{id}	Atualiza um item
+DELETE	/api/items/{id}	Deleta um item
+📘 Documentação Swagger
 
-    GET /api/items — Lista todos os itens
+A documentação da API está disponível com Swagger:
 
-    GET /api/items/{id} — Busca um item pelo ID
-
-    POST /api/items — Cria um novo item
-
-    PUT /api/items/{id} — Atualiza um item existente
-
-    DELETE /api/items/{id} — Deleta um item
-
+👉 http://localhost:8080/swagger-ui.html
 O que Aprendi com este Projeto 📚
 
 Este projeto foi uma excelente introdução prática ao desenvolvimento com Java e Spring Boot. Durante o desenvolvimento, aprendi a:
 
     Criar APIs REST para operações CRUD.
 
-    Configurar e utilizar o Spring Boot para agilizar o desenvolvimento.
+    Configurar e utilizar o Spring Boot.
 
-    Compreender o papel do Maven no gerenciamento do projeto, mesmo usando-o de forma básica.
+    Usar Maven no gerenciamento do projeto.
 
-    Organizar um projeto backend com controllers, services e repositórios.
+    Organizar o backend com controllers, services e repositórios.
 
-    Aplicar conceitos de programação orientada a objetos e boas práticas.
+    Aplicar boas práticas de programação orientada a objetos.
+
+    Utilizar banco de dados H2 para facilitar o desenvolvimento local.
+
+    Documentar APIs usando Swagger.
 
 Esse primeiro contato com o Spring é a base para projetos mais avançados que pretendo desenvolver.
