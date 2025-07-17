@@ -31,7 +31,7 @@ Agora, também suporta o banco de dados em memória **H2**, facilitando a execu�
 
 ## Tecnologias Utilizadas
 
-- Java 17  
+- Java 21
 - Spring Boot  
 - Maven  
 - Spring Data JPA  
